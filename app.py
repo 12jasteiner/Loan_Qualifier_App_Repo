@@ -32,6 +32,7 @@ def load_bank_data():
 
     csvpath = questionary.text("Enter a file path to a rate-sheet (.csv):").ask()
     csvpath = Path(csvpath)
+    #if name of file does not exist, re-enter file name
     if not csvpath.exists():
         print("this file does not exist, try again.")
         return load_bank_data()
