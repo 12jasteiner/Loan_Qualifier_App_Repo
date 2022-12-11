@@ -29,7 +29,7 @@ def load_csv(csvpath):
             data.append(row)
     return data
 
-def save_csv(data, csvpath):
+def save_csv(data, header, csvpath):
     """Saves data to a CSV file.
 
     Args:
@@ -39,6 +39,8 @@ def save_csv(data, csvpath):
 
     with open(csvpath, "w") as csvfile:
         csvwriter = csv.writer(csvfile, delimiter=",")
+        if header is not None:
+            csvwriter.writerow(header)
         for row in data:
             csvwriter.writerow(row)
     

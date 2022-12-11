@@ -113,8 +113,8 @@ def save_qualifying_loans(qualifying_loans):
     # @TODO: Complete the usability dialog for savings the CSV Files.
     csvpath = questionary.text("What would you like to name the file (.csv)?").ask()
     csvpath = Path(csvpath)
-
-    save_csv(qualifying_loans, csvpath) #function for saving qualifying loans as csv file from filio.py
+    header = ["Lender","Max Loan Amount","Max LTV","Max DTI","Min Credit Score", "Interest Rate"]
+    save_csv(qualifying_loans, header, csvpath) #function for saving qualifying loans as csv file from filio.py
     
 
 
