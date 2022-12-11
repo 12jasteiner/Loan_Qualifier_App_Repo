@@ -1,33 +1,61 @@
-# Project Title
+# Loan_Qualifier_App
 
-Just after the title, introduce your project by describing attractively what the project is about and what is the main problem that inspires you to create this project or what is the main contribution for the potential user of your project.
+This app is designed to take user input of credit score, monthly debt, desired loan amount, and house price to determine which loans the user qualifies for.
 
 ---
 
 ## Technologies
 
-Describe the technologies required to use your project such as programming languages, libraries, frameworks, and operating systems. Be sure to include the specific versions of any critical dependencies that you have used in the stable version of your project.
+This app runs using python version 3.7.13. Windows 10 OS. The app uses the pathlib, questionary, sys, and fire libraries
 
 ---
 
 ## Installation Guide
 
-In this section, you should include detailed installation notes containing code blocks and screenshots.
+1) Ensure you are running Python version 3.7.13+
+
+2) Install the following libraries:
+    * Fire
+    * Sys
+    * Questionary
+    * Pathlib 
 
 ---
 
 ## Usage
 
-This section should include screenshots, code blocks, or animations explaining how to use your project.
+Run app using:
+```
+> python app.py
+```
+The following would be example input:
+
+```
+? Enter a file path to a rate-sheet (.csv): ./data/da 
+ily_rate_sheet.csv
+? What's your credit score? 750
+? What's your current amount of monthly debt? 2000    
+? What's your total monthly income? 7000
+? What's your desired loan amount? 15000
+? What's your home value? 240000
+The monthly debt to income ratio is 0.29
+The loan to value ratio is 0.06.
+Found 15 qualifying loans
+? Would you like to save your qualifying loans? No    
+Thank you for using our service!
+```
 
 ---
 
 ## Contributors
 
-In this section, list all the people who contribute to this project. You might want recruiters or potential collaborators to reach you, so include your contact email and, optionally, your LinkedIn or Twitter profile.
+Jason Steiner
+email: jrs2276@caa.columbia.edu
+
 
 ---
 
 ## License
 
-When you share a project on a repository, especially a public one, it's important to choose the right license to specify what others can and can't with your source code and files. Use this section to include the license you want to use.
+[See MIT license](https://github.com/12jasteiner/Loan_Qualifier_App_Repo/blob/main/LICENSE.md)
+
