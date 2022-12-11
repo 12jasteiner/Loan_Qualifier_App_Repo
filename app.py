@@ -33,7 +33,9 @@ def load_bank_data():
     csvpath = questionary.text("Enter a file path to a rate-sheet (.csv):").ask()
     csvpath = Path(csvpath)
     if not csvpath.exists():
-        sys.exit(f"Oops! Can't find this path: {csvpath}")
+        print("this file does not exist, try again.")
+        return load_bank_data()
+    
 
     return load_csv(csvpath)
 
@@ -130,8 +132,8 @@ def run():
         bank_data, credit_score, debt, income, loan_amount, home_value
     )
     #query prompt to ask if user would like to save qualifying loans 
-    save_query = questionary.text("Would you like to save your qualifying loans [y/n]").ask()
-    if save_query == "y":
+    save_query = questionary.confirm("Would you like to save your qualifying loans?").ask()
+    if save_query:
         save_qualifying_loans(qualifying_loans)
     else:
         print("Thank you for using our service!")
