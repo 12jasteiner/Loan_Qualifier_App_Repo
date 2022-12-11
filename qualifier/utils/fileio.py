@@ -30,6 +30,13 @@ def load_csv(csvpath):
     return data
 
 def save_csv(data, csvpath):
+    """Saves data to a CSV file.
+
+    Args:
+        data (list of lists): The data that will be saved to the csv file.
+        csvpath (path): File will be saved as .csv
+    """
+
     with open(csvpath, "w") as csvfile:
         csvwriter = csv.writer(csvfile, delimiter=",")
         for row in data:
